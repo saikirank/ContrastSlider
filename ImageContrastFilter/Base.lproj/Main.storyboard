@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-Dy-g6g">
+                                <rect key="frame" x="0.0" y="60" width="375" height="283"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="283" id="Zyc-Xt-zJh"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fZ3-xN-c14">
+                                <rect key="frame" x="92" y="376" width="191.5" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="wSW-uk-c5A"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="193-78-DHM">
+                                <rect key="frame" x="145.5" y="441" width="84" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY9-EE-pCy" userLabel="rotateLeftbtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                        <state key="normal" image="btn_rotate_left"/>
+                                        <connections>
+                                            <action selector="rotateLeft" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NG-MU-miG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f58-9n-5oB" userLabel="rotateRightbtn">
+                                        <rect key="frame" x="47" y="0.0" width="37" height="37"/>
+                                        <state key="normal" image="btn_rotate_right"/>
+                                        <connections>
+                                            <action selector="rotateRight" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3z-9N-CyG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f58-9n-5oB" firstAttribute="height" secondItem="OY9-EE-pCy" secondAttribute="height" id="2eo-xO-Ihl"/>
+                                    <constraint firstItem="f58-9n-5oB" firstAttribute="width" secondItem="OY9-EE-pCy" secondAttribute="width" id="TPc-Ih-R3K"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kdz-Dy-g6g" secondAttribute="trailing" id="8b2-VG-O1N"/>
+                            <constraint firstItem="fZ3-xN-c14" firstAttribute="top" secondItem="kdz-Dy-g6g" secondAttribute="bottom" constant="33" id="T9l-8s-2P5"/>
+                            <constraint firstItem="fZ3-xN-c14" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Zti-AB-YrJ"/>
+                            <constraint firstItem="fZ3-xN-c14" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHU-Lg-wb8"/>
+                            <constraint firstItem="193-78-DHM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVr-en-IVO"/>
+                            <constraint firstItem="kdz-Dy-g6g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="k5e-M0-POT"/>
+                            <constraint firstItem="193-78-DHM" firstAttribute="top" secondItem="fZ3-xN-c14" secondAttribute="bottom" constant="35" id="nk4-7i-l4Q"/>
+                            <constraint firstItem="kdz-Dy-g6g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o7Q-g4-0Kj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="kdz-Dy-g6g" id="aei-A7-VlF"/>
+                        <outlet property="slider" destination="fZ3-xN-c14" id="A0t-U6-mxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_rotate_left" width="37" height="37"/>
+        <image name="btn_rotate_right" width="37" height="37"/>
+        <image name="img" width="450" height="283"/>
+    </resources>
+</document>
